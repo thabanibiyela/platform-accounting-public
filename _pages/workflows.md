@@ -312,4 +312,4 @@ Authentication to BigQuery uses the Apps Script project's service account creden
 
 ---
 
-📄 [Back to Report](report) · [← Data Model](data-model) · [CLI →](cli) · [BI →](bi) · [Back to Overview](/)
+[Back to Overview](/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 

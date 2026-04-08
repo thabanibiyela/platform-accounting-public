@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Home"
+permalink: /
+---
+
+
 # From Spreadsheets to the Cloud: Automating Revenue Accounting
 
 *MSc Computer Science Capstone Project — University of London*

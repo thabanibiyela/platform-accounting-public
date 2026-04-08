@@ -417,4 +417,4 @@ Integration tests verify that the application successfully interfaces with BigQu
 
 ---
 
-📄 [Back to Report](report) · [← Workflows](workflows) · [BI →](bi) · [Back to Overview](/)
+[Back to Overview](/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 
