@@ -93,7 +93,7 @@ Each extracted table has the following key columns (among ~50 total):
 | `cost_center` | STRING | Cost centre worktag |
 | `business_unit` | STRING | Business unit worktag |
 | `region` | STRING | Geographic region |
-| `system_reference_code` | STRING | TMS integration reference code |
+| `system_reference_code` | STRING | Platform integration reference code |
 | `revenue_category` | STRING | Workday revenue category worktag |
 | `run_id` | INT64 | Process run identifier |
 

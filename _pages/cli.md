@@ -317,7 +317,7 @@ class EIBImportSQL(AccountingSQLQuery):
         """
 
 class WDJournalTMSLinesSQL(AccountingSQLQuery):
-    """Queries posted Workday journal lines for TMS reconciliation."""
+    """Queries posted Workday journal lines for platform reconciliation."""
     ...
 
 class ReconDataSQL(AccountingSQLQuery):

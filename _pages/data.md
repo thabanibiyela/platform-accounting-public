@@ -104,13 +104,13 @@ Processes commissions and service charges invoiced to restaurant partners. Signi
 | Invoiced revenue | Settled invoices — partner commission and fees |
 | Commission refunds | Credit notes issued against previously invoiced amounts |
 | Invoice accruals | Month-end accrual for orders not yet invoiced |
-| TMS accruals | Weekly-reported revenue from the Transport Management System |
+| Platform revenue accruals | Weekly-reported revenue from the order management system |
 
 **Key models:**
 - `q1_commission_pre_invoicing.sql` — Pre-enrichment: invoiced commission by restaurant
 - `q2_232_commission_refund_details.sql` — Pre-enrichment: refund amounts by invoice
-- `q2_tr_accrual_pre_invoicing.sql` — Pre-enrichment: TMS weekly revenue accruals
-- `q3A_tms_revenue_weekly.sql` — Pre-enrichment: TMS weekly aggregation
+- `q2_tr_accrual_pre_invoicing.sql` — Pre-enrichment: platform weekly revenue accruals
+- `q3A_tms_revenue_weekly.sql` — Pre-enrichment: platform weekly revenue aggregation
 - `enriched_q1_invoice_accruals.sql` — Enriched: accrual amounts with full GL dimensions
 - `aggregated_qXX_partner_invoicing_view.sql` — Aggregated view (union of all sub-processes)
 - `aggregated_qXX_partner_invoicing_table.sql` — Materialised table (performance)
@@ -144,7 +144,7 @@ WHERE DATE(orders.datum) IN (SELECT datum FROM dates)
 | `1_order_level/` | Order details, payments, order fees, top-rank bids, VAT breakdown |
 | `2_invoice_level/` | Accounting entries, invoices, order invoicing costs |
 | `3_restaurant_master_data/` | Restaurant details, country settings, restaurant settings |
-| `4_other_master_data/` | Accounting dates, couriers, TMS countries, accounting master data views |
+| `4_other_master_data/` | Accounting dates, couriers, platform countries, accounting master data views |
 
 ---
 
@@ -168,7 +168,7 @@ The enrichment step is where platform data is mapped to the financial chart of a
 
 ## Layer 4 — Aggregation
 
-Aggregated models group enriched data to the minimum set of dimensions required for posting and downstream processes. The partner invoicing aggregated view unions all four sub-processes (invoiced, refunds, invoice accruals, TMS accruals) into a single model:
+Aggregated models group enriched data to the minimum set of dimensions required for posting and downstream processes. The partner invoicing aggregated view unions all four sub-processes (invoiced, refunds, invoice accruals, platform revenue accruals) into a single model:
 
 ```sql
 -- aggregated_qXX_partner_invoicing_view.sql (structure)
@@ -281,9 +281,9 @@ The dbt project's `seeds/` directory contains the accounting master data maintai
 | `acc_md_company.csv` | Country code → legal entity mapping |
 | `acc_md_business_unit.csv` | Business unit codes and descriptions |
 | `acc_md_wd_details.csv` | Revenue category → GL account mapping |
-| `acc_md_tms_cc_to_bu.csv` | TMS cost centre → business unit cross-reference |
+| `acc_md_tms_cc_to_bu.csv` | Platform cost centre → business unit cross-reference |
 | `acc_md_tms_spc_and_gl_to_cost_center.csv` | SPC/GL → cost centre mapping |
-| `acc_md_tms_wd_process_mapping.csv` | TMS process → Workday process mapping |
+| `acc_md_tms_wd_process_mapping.csv` | Platform process → Workday process mapping |
 | `acc_md_delivery_locations.csv` | City → Workday delivery location ID |
 | `acc_md_courier_business_unit.csv` | Courier type → business unit |
 | `acc_md_process_id.csv` | Process ID → workflow mapping |
@@ -297,7 +297,7 @@ The dbt project's `seeds/` directory contains the accounting master data maintai
 |---|---|
 | `rev_spc_pl_hierarchy.csv` | Revenue SPC P&L hierarchy |
 | `wd_account_class_map.csv` | Workday account class mapping |
-| `wd_tms_system_codes_map.csv` | TMS system code → Workday reference |
+| `wd_tms_system_codes_map.csv` | Platform system code → Workday reference |
 
 ---
 

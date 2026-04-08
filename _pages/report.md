@@ -164,7 +164,7 @@ Processes commissions, service fees, and accruals relating to restaurant partner
 - Invoiced partner revenue (billed and settled invoices)
 - Commission refunds (credit notes)
 - Invoice accruals (month-end accrued revenue for uninvoiced orders)
-- TMS revenue accruals (weekly-reported revenue pending invoicing)
+- Platform revenue accruals (weekly-reported revenue pending invoicing)
 
 ### 4.3 Journal Entry Models (`3_journals/`)
 
@@ -204,7 +204,7 @@ The model is governed by a set of seed files (CSV) that encode the accounting ma
 | `acc_md_company.csv` | Country code to company entity mapping |
 | `acc_md_business_unit.csv` | Business unit worktag definitions |
 | `acc_md_wd_details.csv` | Revenue category and GL account mapping |
-| `acc_md_tms_cc_to_bu.csv` | TMS cost centre to business unit mapping |
+| `acc_md_tms_cc_to_bu.csv` | Platform cost centre to business unit mapping |
 | `acc_md_delivery_locations.csv` | City to Workday delivery location mapping |
 | `acc_md_process_id.csv` | Process identifier to workflow mapping |
 
