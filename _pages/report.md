@@ -111,15 +111,15 @@ The existing monolithic ETL architecture was replaced with a modular design, sep
 
 ```
                     ┌─────────────────────────────────────┐
-                    │         Google BigQuery              │
+                    │         Google BigQuery             │
   Workday API ─────►│  Raw Journal Lines                  │
-                    │  (workday_journal_lines_YYYY_MM_*)   │
+                    │  (workday_journal_lines_YYYY_MM_*)  │
                     └──────────────┬──────────────────────┘
                                    │
                     ┌──────────────▼──────────────────────┐
-                    │         dbt Data Model               │
+                    │         dbt Data Model              │
   Platform Data ───►│  Staging → Intermediate →           │
-                    │  Enrichment → Aggregation            │
+                    │  Enrichment → Aggregation           │
                     └──────────────┬──────────────────────┘
                                    │
               ┌────────────────────┼────────────────────┐
