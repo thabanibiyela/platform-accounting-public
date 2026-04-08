@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+      nav.top-nav {
+        border-bottom: 1px solid #ddd;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      nav.top-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav.top-nav ul li a {
+        display: block;
+        padding: 18px 32px;
+        text-decoration: none;
+        color: #555;
+        font-size: 18px;
+        border-bottom: 3px solid transparent;
+      }
+      nav.top-nav ul li a:hover,
+      nav.top-nav ul li a.active {
+        color: #000;
+        border-bottom: 3px solid #494e52;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <ul>
+        {% for link in site.nav_links %}
+          <li>
+            <a href="{{ link.url | relative_url }}"
+              {% if page.url == link.url or page.url == link.url | append: "/" %}class="active"{% endif %}>
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <header>
+        {% if site.logo %}
+          <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+        {% endif %}
+        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+theme: jekyll-theme-minimal
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+nav_links:
+  - title: Overview
+    url: /
+  - title: Data Model
+    url: /data-model
+  - title: Workflows
+    url: /workflows
+  - title: CLI
+    url: /cli
+  - title: BI
+    url: /bi
+  - title: Report
+    url: /report
+
+logo: assets/images/profile1_small.png
+title: Thabani's homepage
+description: A curated collection of my work in finance automation showcasing how I use Python, SQL, JavaScript, and GCP to solve complex financial problems and build data-driven tools.
+
+# These settings control the types of collections used by the template
