@@ -1,4 +1,6 @@
 theme: jekyll-theme-minimal
+url: https://thabanibiyela.github.io
+baseurl: /platform-accounting-public
 
 collections:
   pages:

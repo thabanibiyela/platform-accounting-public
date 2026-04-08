@@ -219,4 +219,4 @@ The dashboards eliminated the team's ad hoc reporting workload entirely. The tea
 
 ---
 
-[Back to Overview](..) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 
+[Back to Overview]({{ site.baseurl }}/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 
