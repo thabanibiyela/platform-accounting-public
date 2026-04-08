@@ -359,4 +359,4 @@ dbt Jinja templating is used throughout for:
 
 ---
 
-[Back to Overview](/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report)
+[Back to Overview](..) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report)
