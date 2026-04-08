@@ -506,4 +506,4 @@ The workflow applies relevance filters (company, GL account prefix, posting stat
 
 ---
 
-[Back to Overview]({{ site.baseurl }}/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report)
+[Back to Overview]({{ site.url }}/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report)

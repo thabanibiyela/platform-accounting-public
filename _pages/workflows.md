@@ -16,8 +16,8 @@ Two Google App Scripts workflows keep the platform accounting system running rel
 
 ```
                    ┌──────────────────────┐
-                   │   Google App Scripts  │
-                   │   (Scheduled Triggers)│
+                   │  Google App Scripts  │
+                   │  (Scheduled Triggers)│
                    └──────┬───────────────┘
                           │
           ┌───────────────┼───────────────┐
@@ -159,7 +159,7 @@ Runs data quality assertions against the BigQuery dataset daily and controls whe
 
 ```
 ┌─────────────────────────────────────────────────┐
-│              Scheduled Daily Trigger             │
+│              Scheduled Daily Trigger            │
 └────────────────────┬────────────────────────────┘
                      │
                      ▼
@@ -184,7 +184,7 @@ Runs data quality assertions against the BigQuery dataset daily and controls whe
   │  Materialise   │  │  Abort. Send       │
   │  production    │  │  failure report    │
   │  tables        │  │  by email          │
-  │                │  │                   │
+  │                │  │                    │
   │  Send success  │  └────────────────────┘
   │  notification  │
   └────────────────┘
@@ -312,4 +312,4 @@ Authentication to BigQuery uses the Apps Script project's service account creden
 
 ---
 
-[Back to Overview]({{ site.baseurl }}/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 
+[Back to Overview]({{ site.url }}/) · [Data Model](data-model) · [Workflows](workflows) · [CLI Application](cli) · [BI Reporting](bi) · [Extended Report](report) 
