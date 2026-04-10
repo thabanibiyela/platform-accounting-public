@@ -63,8 +63,6 @@ Raw Transactions → Staging → Intermediate → Enrichment → Aggregation →
 
 Revenue is processed across two streams — **B2C consumer delivery fees** and **B2B partner invoicing** — each with dedicated staging, intermediate, and aggregation models. Data quality assertions are materialised as BigQuery tables and evaluated daily by an automated monitoring workflow.
 
-**Performance highlight:** Materialising the partner invoicing aggregation as a physical BigQuery table reduced query time from **8 minutes to 1 second**.
-
 [View full data model documentation →](_pages/data.md)
 
 ---
