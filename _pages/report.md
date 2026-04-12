@@ -500,9 +500,9 @@ The workflow applies relevance filters (company, GL account prefix, posting stat
 
 ### 8.3 Limitations and Future Work
 
-- The audit support module (`ProcessAudit`) was scoped but not implemented in the project timeframe
 - The current deployment relies on manual `gforevpy` invocation; full automation would require a scheduler (e.g. Cloud Scheduler + Cloud Run)
-- The reconciliation workflow assumes Workday data has been loaded by the extraction workflow prior to use
+- The CLI application currently generates EIB files for manual upload to Workday. A natural next step would be to migrate the journal entry process to the Workday Accounting Centre, which would derive accounting journals directly from the data model using configurable mapping tables. This would remove the manual upload step and result in fully automated straight-through processing.
+- On the orchestration side, the current Google App Scripts implementation handles basic scheduling but lacks cross-system dependency management and robust retry logic. Migrating to Apache Airflow integrated with dbt Cloud would address this.
 
 ---
 
