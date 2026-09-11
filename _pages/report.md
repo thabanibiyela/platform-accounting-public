@@ -488,7 +488,7 @@ The workflow applies relevance filters (company, GL account prefix, posting stat
 | Journal entry (per account) | ~60 min | < 5 min | 92% reduction |
 | Reconciliation (per account) | ~180 min | < 5 min | 97% reduction |
 | Partner invoicing query | ~8 min | < 1 sec | 99.8% reduction |
-| Annual labour saving | — | 350+ hours | — |
+| Annual labour saving | — | 390+ hours | — |
 | Data quality coverage | 0 automated checks | 27 assertion models | — |
 
 ### 8.2 Qualitative Outcomes

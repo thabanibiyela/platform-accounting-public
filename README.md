@@ -35,7 +35,7 @@ Following an enterprise architecture gap analysis (TOGAF framework), three work 
 |---|---|---|
 | Journal entry (per account) | ~60 minutes | < 5 minutes |
 | Reconciliation (per account) | ~180 minutes | < 5 minutes |
-| Annual labour saving | — | 350+ hours |
+| Annual labour saving | — | 390+ hours |
 
 **Stack:** Python · SQL (dbt) · JavaScript · Google BigQuery · Google App Scripts · Google Looker Studio · JupyterLab · SQLite · Git
 
